@@ -229,3 +229,63 @@ Related requirements: FR-22, FR-23, FR-24
 - Given an authenticated user who is not a participant, when they request that conversation's messages, then access is denied without disclosing message contents.
 
 - Given a user who is not a participant, when they attempt to send a message through that existing conversation, then the system rejects the operation.
+
+### 6.8 AC-08: Conversation List
+
+Related requirements: FR-14
+
+- Given an authenticated user with existing conversations, when they open their conversation list, then all conversations in which they are a participant are displayed.
+- Given an authenticated user with no existing conversations, when they open their conversation list, then no conversations are displayed.
+- Given a conversation in which the authenticated user is not a participant, when they open their conversation list, then that conversation is not displayed.
+
+## 7. Out of Scope
+
+The following features are excluded from the Minimum Viable Product (MVP) and may be considered for future releases.
+
+| ID | Feature | Description |
+|---|---|---|
+| OS-01 | Real-Time Messaging | Automatic delivery and display of new messages without manually refreshing or retrieving conversation history. |
+| OS-02 | Group Conversations | Conversations involving more than two participants. |
+| OS-03 | Voice Calling | Audio communication between users. |
+| OS-04 | Video Calling | Video communication between users. |
+| OS-05 | Media Sharing | Sending images, videos, documents, or other file attachments. |
+| OS-06 | Custom Profile Images | Uploading or selecting personalized profile pictures. |
+| OS-07 | Message Editing and Deletion | Modifying or deleting previously sent messages. |
+| OS-08 | Notifications | Push notifications or alerts for incoming messages. |
+
+These features are not required for MVP acceptance and will require additional requirements analysis before implementation.
+
+## 8. Requirements Traceability Matrix
+
+The Requirements Traceability Matrix (RTM) establishes relationships between the Chat Application Customer Policy, functional requirements, and acceptance criteria.
+
+The matrix supports requirements verification by identifying which acceptance criteria validate each functional requirement.
+
+| Functional Requirement | Customer Policy | Acceptance Criteria |
+|---|---|---|
+| FR-01 — User Registration | CP-01 | AC-01 |
+| FR-02 — Unique Email Address | CP-02 | AC-01 |
+| FR-03 — Unique Username | CP-03 | AC-01 |
+| FR-04 — User Authentication | CP-04 | AC-02 |
+| FR-05 — Invalid Login Handling | CP-04 | AC-02 |
+| FR-06 — User Logout | CP-05, CP-09 | AC-02 |
+| FR-07 — Default Profile Icon | CP-06 | AC-03 |
+| FR-08 — Profile Navigation | CP-07 | AC-03 |
+| FR-09 — Profile Information | CP-08 | AC-03 |
+| FR-10 — Profile Logout | CP-09 | AC-03 |
+| FR-11 — Username Search | CP-11 | AC-04 |
+| FR-12 — Search Results | CP-11 | AC-04 |
+| FR-13 — Initiate Direct Messaging | CP-10, CP-12 | AC-04 |
+| FR-14 — Conversation List | CP-14 | AC-08 |
+| FR-15 — Conversation Creation | CP-15 | AC-05 |
+| FR-16 — Conversation Uniqueness | CP-16 | AC-05 |
+| FR-17 — Existing Conversation Reuse | CP-15, CP-16 | AC-05 |
+| FR-18 — Send Text Messages | CP-13, CP-17 | AC-06 |
+| FR-19 — Message Validation | CP-13, CP-17 | AC-06 |
+| FR-20 — Message Persistence | CP-18 | AC-06 |
+| FR-21 — Conversation History | CP-18 | AC-06 |
+| FR-22 — Conversation Access Control | CP-19, C-02 | AC-07 |
+| FR-23 — Message Authorization | CP-17, CP-19, C-02 | AC-07 |
+| FR-24 — Unauthorized Access Handling | CP-19, C-02 | AC-07 |
+
+The matrix will be updated when customer policies, functional requirements, or acceptance criteria change.
